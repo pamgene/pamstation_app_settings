@@ -16,7 +16,7 @@
         "factors": [
           {
             "kind": "Factor",
-            "name": "ds4.Median_SigmBg",
+            "name": "ds3.Median_SigmBg",
             "type": "double"
           }
         ],
@@ -48,7 +48,7 @@
         "factors": [
           {
             "kind": "Factor",
-            "name": "ds3.ID",
+            "name": "ds1.ID",
             "type": "string"
           }
         ],
@@ -97,7 +97,7 @@
               "stringValue": "0.05",
               "factor": {
                 "kind": "Factor",
-                "name": "ds4.Signal_Saturation",
+                "name": "ds3.Signal_Saturation",
                 "type": "double"
               }
             }
@@ -157,7 +157,7 @@
         "factors": [
           {
             "kind": "Factor",
-            "name": "ds3.ID",
+            "name": "ds1.ID",
             "type": "string"
           }
         ],
@@ -197,7 +197,7 @@
           "filterExprs": [
             {
               "kind": "FilterExpr",
-              "filterOp": "equals",
+              "filterOp": "less",
               "stringValue": "94",
               "factor": {
                 "kind": "Factor",
@@ -261,7 +261,7 @@
         "factors": [
           {
             "kind": "Factor",
-            "name": "ds3.ID",
+            "name": "ds1.ID",
             "type": "string"
           }
         ],
@@ -349,7 +349,7 @@
         "factors": [
           {
             "kind": "Factor",
-            "name": "ds3.ID",
+            "name": "ds1.ID",
             "type": "string"
           }
         ],
@@ -464,7 +464,7 @@
         "factors": [
           {
             "kind": "Factor",
-            "name": "ds3.ID",
+            "name": "ds1.ID",
             "type": "string"
           }
         ],
@@ -595,7 +595,7 @@
         "factors": [
           {
             "kind": "Factor",
-            "name": "ds3.ID",
+            "name": "ds1.ID",
             "type": "string"
           }
         ],
@@ -690,7 +690,7 @@
         "factors": [
           {
             "kind": "Factor",
-            "name": "ds35.ID",
+            "name": "ds1.ID",
             "type": "string"
           }
         ],
@@ -722,7 +722,7 @@
         "factors": [
           {
             "kind": "Factor",
-            "name": "js0.Barcode",
+            "name": "ds0.Barcode",
             "type": "string"
           }
         ],
@@ -801,7 +801,7 @@
         "factors": [
           {
             "kind": "Factor",
-            "name": "ds35.ID",
+            "name": "ds1.ID",
             "type": "string"
           }
         ],
@@ -817,12 +817,12 @@
         "factors": [
           {
             "kind": "Factor",
-            "name": "ds08.Barcode",
+            "name": "ds0.Barcode",
             "type": "string"
           },
           {
             "kind": "Factor",
-            "name": "ds08.Row",
+            "name": "ds0.Row",
             "type": "double"
           }
         ],
@@ -838,7 +838,7 @@
         "factors": [
           {
             "kind": "Factor",
-            "name": "ds08.Barcode",
+            "name": "ds0.Barcode",
             "type": "string"
           }
         ],
@@ -905,7 +905,7 @@
         "factors": [
           {
             "kind": "Factor",
-            "name": "ds3.ID",
+            "name": "ds1.ID",
             "type": "string"
           }
         ],
@@ -1000,7 +1000,7 @@
         "factors": [
           {
             "kind": "Factor",
-            "name": "ds3.ID",
+            "name": "ds1.ID",
             "type": "string"
           }
         ],
