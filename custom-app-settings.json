@@ -2,7 +2,7 @@
   {
     "kind": "AppDesign",
     "namespace": "ETS",
-    "description": "",
+    "description": "Combines multiple exposure times from PamGene PS12 images.",
     "name": "ets.c06_groups_series_measurement2",
     "type": "ets.c06_groups_series_measurement2",
     "factors": [
@@ -110,8 +110,8 @@
   },
   {
     "kind": "AppDesign",
-    "namespace": "PTK QC",
-    "description": "",
+    "namespace": "PTKQC",
+    "description": "Quality control of Tyrosine PamChip measurements.",
     "name": "ptkqc.c06_groups_series_measurement2",
     "type": "ptkqc.c06_groups_series_measurement2",
     "factors": [
@@ -214,8 +214,8 @@
   },
   {
     "kind": "AppDesign",
-    "namespace": "STK QC",
-    "description": "",
+    "namespace": "STKQC",
+    "description": "Quality control of Serine/Threonine PamChip measurements.",
     "name": "stkqc.c05_groups_series",
     "type": "stkqc.c05_groups_series",
     "factors": [
@@ -318,8 +318,8 @@
   },
   {
     "kind": "AppDesign",
-    "namespace": "LogFoldChange",
-    "description": "",
+    "namespace": "LFC",
+    "description": "Calculates the ratio (Log fold change) between a control and treatment condition.",
     "name": "lfc.c07_super_2group_control_pair",
     "type": "lfc.c07_super_2group_control_pair",
     "factors": [
@@ -433,8 +433,8 @@
   },
   {
     "kind": "AppDesign",
-    "namespace": "FoldChange",
-    "description": "Namespace prefixes all computed values.",
+    "namespace": "FC",
+    "description": "Calculates the ratio (fold change) between a control and treatment condition.",
     "name": "fc.2groups_super_pairing_control",
     "type": "fc.2groups_super_pairing_control",
     "factors": [
@@ -548,8 +548,8 @@
   },
   {
     "kind": "AppDesign",
-    "namespace": "ttest",
-    "description": "Namespace prefixes all computed values.",
+    "namespace": "TTEST",
+    "description": "Determines if there is a significant difference between the means of two groups.",
     "name": "ttest.c07_super_2group_control_pair",
     "type": "ttest.c07_super_2group_control_pair",
     "factors": [
@@ -643,8 +643,8 @@
   },
   {
     "kind": "AppDesign",
-    "namespace": "ttestp",
-    "description": "Namespace prefixes all computed values.",
+    "namespace": "TTESTP",
+    "description": "Determines if there is a significant difference between the means of two groups of matched pairs.",
     "name": "ttestp.c07_super_2group_control_pair",
     "type": "ttestp.c07_super_2group_control_pair",
     "factors": [
@@ -754,8 +754,8 @@
   },
   {
     "kind": "AppDesign",
-    "namespace": "MTvC",
-    "description": "",
+    "namespace": "MTVC",
+    "description": "Performs a statistical comparison of one control vs muliptle treatment conditions.",
     "name": "mtvc.c06_super_groups_control",
     "type": "mtvc.c06_super_groups_control",
     "factors": [
@@ -875,7 +875,7 @@
   {
     "kind": "AppDesign",
     "namespace": "UKA",
-    "description": "A app to convert peptides to kinases",
+    "description": "Converts a list of peptides into a list of kinases.",
     "name": "uka_c06_2group_control_ID",
     "type": "uka_c06_2group_control_ID",
     "factors": [
@@ -954,7 +954,7 @@
   {
     "kind": "AppDesign",
     "namespace": "DRC",
-    "description": "",
+    "description": "Performs a Dose Response Curve fitting of the data.",
     "name": "drc.c05_groups_series",
     "type": "drc.c05_groups_series",
     "factors": [
