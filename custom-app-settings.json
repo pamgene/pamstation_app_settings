@@ -11,7 +11,7 @@
         "name": "Measurement",
         "type": "double",
         "isSingle": true,
-        "description": "Select the values that you wish to use in the computation.\n\nExample:\n* Median_SigmBg\n* Any computed value",
+        "description": "Select the values to use in the computation.\n\nExample:\n* Median_SigmBg\n* Any computed value",
         "factorName": "Quantitation Type",
         "factors": [
           {
@@ -120,7 +120,7 @@
         "name": "Measurement",
         "type": "double",
         "isSingle": true,
-        "description": "Select the values that you wish to use in the computation.\n\nExample:\n* S100",
+        "description": "Select the values to use in the computation.\n\nExample:\n* S100",
         "factorName": "Quantitation Type",
         "factors": [
           {
@@ -224,7 +224,7 @@
         "name": "Measurement",
         "type": "double",
         "isSingle": true,
-        "description": "Select the values that you wish to use in the computation.\n\nExample:\n* S100",
+        "description": "Select the values to use in the computation.\n\nExample:\n* S100",
         "factorName": "Quantitation Type",
         "factors": [
           {
@@ -328,7 +328,7 @@
         "name": "Measurement",
         "type": "double",
         "isSingle": true,
-        "description": "Select the values that you wish to use in the computation.\n\nExample:\n* S100\n* Any computed value",
+        "description": "Select the values to use in the computation.\n\nExample:\n* S100\n* Any computed value",
         "factorName": "Quantitation Type",
         "factors": [
           {
@@ -443,12 +443,12 @@
         "name": "Measurement",
         "type": "double",
         "isSingle": true,
-        "description": "Select the values that you wish to use in the computation.\n\nExample:\n* log transform of S100",
+        "description": "Select the values to use in the computation.\n\nExample:\n* log transform of S100",
         "factorName": "Quantitation Type",
         "factors": [
           {
             "kind": "Factor",
-            "name": "ds6.logTransformed",
+            "name": "s100.identity",
             "type": "double"
           }
         ],
@@ -488,6 +488,22 @@
       },
       {
         "kind": "MappingFactor",
+        "name": "Group",
+        "type": "string",
+        "isSingle": false,
+        "description": "Select the comparison groups.\n\nExample:\n* Treatment off chip",
+        "factorName": "Treatment",
+        "factors": [
+          {
+            "kind": "Factor",
+            "name": "js0.Treatment off chip",
+            "type": "string"
+          }
+        ],
+        "isRequired": true
+      },
+      {
+        "kind": "MappingFactor",
         "name": "Pair",
         "type": "string",
         "isSingle": false,
@@ -501,22 +517,6 @@
           }
         ],
         "isRequired": false
-      },
-      {
-        "kind": "MappingFactor",
-        "name": "Group",
-        "type": "string",
-        "isSingle": true,
-        "description": "Select the comparison groups.\n\nExample:\n* Treatment off chip",
-        "factorName": "Treatment",
-        "factors": [
-          {
-            "kind": "Factor",
-            "name": "js0.Treatment off chip",
-            "type": "string"
-          }
-        ],
-        "isRequired": true
       }
     ],
     "filters": [
@@ -558,7 +558,7 @@
         "name": "Measurement",
         "type": "double",
         "isSingle": true,
-        "description": "Select the values that you wish to use in the computation.\n\nExample:\n* log transform of S100",
+        "description": "Select the values to use in the computation.\n\nExample:\n* log transform of S100",
         "factorName": "Quantitation Type",
         "factors": [
           {
@@ -653,7 +653,7 @@
         "name": "Measurement",
         "type": "double",
         "isSingle": true,
-        "description": "Select the values that you wish to use in the computation.\n\nExample:\n* log transform of S100",
+        "description": "Select the values to use in the computation.\n\nExample:\n* log transform of S100",
         "factorName": "Quantitation Type",
         "factors": [
           {
@@ -756,15 +756,15 @@
     "kind": "AppDesign",
     "namespace": "MTVC",
     "description": "Performs a statistical comparison of one control vs muliptle treatment conditions.",
-    "name": "mtvc.c06_super_groups_control",
-    "type": "mtvc.c06_super_groups_control",
+    "name": "mtvc.c06_groups_pairing_control",
+    "type": "mtvc.c06_groups_pairing_control",
     "factors": [
       {
         "kind": "MappingFactor",
         "name": "Measurement",
         "type": "double",
         "isSingle": true,
-        "description": "Select the values that you wish to use in the computation.\n\nExample:\n* log transform of S100",
+        "description": "Select the values to use in the computation.\n\nExample:\n* log transform of S100",
         "factorName": "Quantitation Type",
         "factors": [
           {
@@ -779,7 +779,7 @@
         "kind": "MappingFactor",
         "name": "Group",
         "type": "string",
-        "isSingle": true,
+        "isSingle": false,
         "description": "Select the comparison groups.\n\nExample:\n* Treatment off chip",
         "factorName": "Treatment",
         "factors": [
@@ -875,7 +875,7 @@
   {
     "kind": "AppDesign",
     "namespace": "UKA",
-    "description": "Converts a list of peptides into a list of kinases.",
+    "description": "Find kinase activity changes from differential peptide phosphorylation.",
     "name": "uka_c06_2group_control_ID",
     "type": "uka_c06_2group_control_ID",
     "factors": [
@@ -884,7 +884,7 @@
         "name": "Measurement",
         "type": "double",
         "isSingle": true,
-        "description": "Select the values that you wish to use in the computation.\n\nExample:\n* log transform of S100",
+        "description": "Select the values use in the computation.\n\nExample:\n* log transform of S100",
         "factorName": "Quantitation Type",
         "factors": [
           {
@@ -916,7 +916,7 @@
         "name": "Group",
         "type": "string",
         "isSingle": false,
-        "description": "Select the comparison groups.\n\nExample:\n* Treatment off chip",
+        "description": "Select the grouping factor for the comparison.\n\nExample:\n* Treatment off chip",
         "factorName": "Treatment",
         "factors": [
           {
@@ -932,7 +932,7 @@
         "name": "Observation",
         "type": "string",
         "isSingle": false,
-        "description": "Select a single set of data for the analysis.\n\nExample:\n* Barcode and Row\n* Barcode and Array",
+        "description": "Select (a) factor(s) that identify single observations in the analysis.\n\nExample:\n* Cell line\n* Subject \n* Barcode and Array",
         "factorName": "Individual observation",
         "factors": [
           {
@@ -963,7 +963,7 @@
         "name": "Measurement",
         "type": "double",
         "isSingle": true,
-        "description": "Select the values that you wish to use in the computation.\n\nExample:\n* Median_SigmBg\n* Any computed value",
+        "description": "Select the values to use in the computation.\n\nExample:\n* Median_SigmBg\n* Any computed value",
         "factorName": "Quantitation Type",
         "factors": [
           {
