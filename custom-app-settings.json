@@ -448,7 +448,7 @@
         "factors": [
           {
             "kind": "Factor",
-            "name": "s100.identity",
+            "name": "ds6.logTransformed",
             "type": "double"
           }
         ],
