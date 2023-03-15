@@ -11,7 +11,7 @@
         "name": "Measurement",
         "type": "double",
         "isSingle": true,
-        "description": "Select the values to use in the computation.\n\nExample:\n* Median_SigmBg\n* Any computed value",
+        "description": "Select the factor that defines the values to use in the computation.\n\nExample:\n* Median_SigmBg (default)",
         "factorName": "Quantitation Type",
         "factors": [
           {
@@ -27,7 +27,7 @@
         "name": "Series",
         "type": "double",
         "isSingle": true,
-        "description": "Select the sequence of images ordered by exposure time.\n\nExample:\n* Exposure Time",
+        "description": "Select the factor which defines the sequence of images.\n\nExample:\n* Exposure Time (default)",
         "factorName": "Exposure Series",
         "factors": [
           {
@@ -43,7 +43,7 @@
         "name": "Variable",
         "type": "string",
         "isSingle": false,
-        "description": "Select the peptide name.\n\nExample:\n* ID",
+        "description": "Select the peptide identifier.\n\nExample:\n* ID (default)",
         "factorName": "Peptide",
         "factors": [
           {
@@ -59,8 +59,8 @@
         "name": "Group",
         "type": "string",
         "isSingle": false,
-        "description": "Select images at a particular cycle.\n\nMultiple factors are required.\n\nExample:\n* Barcode,Row and Cycle\n* Barcode,Array and Cycle",
-        "factorName": "Well Cycle Image",
+        "description": "Select images for each cycle.\n\nMultiple factors are required.\n\nExample:\n* Barcode,Row and Cycle (default)\n* Barcode, Array and Cycle",
+        "factorName": "Unique array, cycle",
         "factors": [
           {
             "kind": "Factor",
@@ -85,7 +85,7 @@
       {
         "kind": "MappingFilter",
         "name": "Measurement2",
-        "description": "Select a quality control measurement.\n\nExample:\n* Signal_Saturation",
+        "description": "Select a filter to exclude saturated signal.\n\nExample:\n* Signal_Saturation (default)",
         "namedFilter": {
           "kind": "NamedFilter",
           "logical": "and",
@@ -102,7 +102,7 @@
               }
             }
           ],
-          "name": "QC Measurement"
+          "name": "Signal saturation"
         },
         "isRequired": false
       }
@@ -120,7 +120,7 @@
         "name": "Measurement",
         "type": "double",
         "isSingle": true,
-        "description": "Select the values to use in the computation.\n\nExample:\n* S100",
+        "description": "Select the factor that defines the values to use in the computation.\n\nExample:\n* S100",
         "factorName": "Quantitation Type",
         "factors": [
           {
@@ -136,7 +136,7 @@
         "name": "Series",
         "type": "double",
         "isSingle": true,
-        "description": "Select the cycle sequence of images.\n\nExample:\n* Cycle",
+        "description": "Select the factor that defines cycle. \n* Cycle (default)",
         "factorName": "Cycle",
         "factors": [
           {
@@ -168,8 +168,8 @@
         "name": "Group",
         "type": "string",
         "isSingle": false,
-        "description": "Select an invidual well.\n\nExample:\n* Barcode and Row\n* Barcode and Array",
-        "factorName": "Well",
+        "description": "Select the factor(s) defining a single value per cell.\n\nExample:\n* Barcode and Row (default)\n* Barcode and Array",
+        "factorName": "Single Data Value per Cell",
         "factors": [
           {
             "kind": "Factor",
@@ -189,7 +189,7 @@
       {
         "kind": "MappingFilter",
         "name": "Series",
-        "description": "A quality control on the chosen cycle.",
+        "description": "Select the cycles.",
         "namedFilter": {
           "kind": "NamedFilter",
           "logical": "and",
@@ -224,7 +224,7 @@
         "name": "Measurement",
         "type": "double",
         "isSingle": true,
-        "description": "Select the values to use in the computation.\n\nExample:\n* S100",
+        "description": "Select the factor that defines the values to use in the computation.\n\nExample:\n* S100 (default)",
         "factorName": "Quantitation Type",
         "factors": [
           {
@@ -240,7 +240,7 @@
         "name": "Series",
         "type": "double",
         "isSingle": true,
-        "description": "Select the cycle sequence of images.\n\nExample:\n* Cycle",
+        "description": "Select the factor that defines cycle. \n* Cycle (default)",
         "factorName": "Cycle",
         "factors": [
           {
@@ -256,7 +256,7 @@
         "name": "Variable",
         "type": "string",
         "isSingle": false,
-        "description": "Select the peptide identifier.\n\nExample:\n* ID",
+        "description": "Select the peptide identifier.\n\nExample:\n* ID (default)",
         "factorName": "Peptide",
         "factors": [
           {
@@ -272,8 +272,8 @@
         "name": "Group",
         "type": "string",
         "isSingle": false,
-        "description": "Select an invidual well.\n\nExample:\n* Barcode and Row\n* Barcode and Array",
-        "factorName": "Well",
+        "description": "Select the factor(s) defining a single value per cell.\n\nExample:\n* Barcode and Row (default) \n* Barcode and Array",
+        "factorName": "Single Data Value per Cell",
         "factors": [
           {
             "kind": "Factor",
@@ -293,7 +293,7 @@
       {
         "kind": "MappingFilter",
         "name": "Series",
-        "description": "A quality control on the chosen cycle.",
+        "description": "Select the cycle",
         "namedFilter": {
           "kind": "NamedFilter",
           "logical": "and",
@@ -328,7 +328,7 @@
         "name": "Measurement",
         "type": "double",
         "isSingle": true,
-        "description": "Select the values to use in the computation.\n\nExample:\n* S100\n* Any computed value",
+        "description": "Select the factor that defines the values to use in the computation.\n\nExample:  \n* log transform of S100\n* log transformed and ComBat Corrected S100\n* VSN transformed S100\n* VSN transformed and ComBat Corrected S100",
         "factorName": "Quantitation Type",
         "factors": [
           {
@@ -360,12 +360,12 @@
         "name": "Supergroup",
         "type": "string",
         "isSingle": false,
-        "description": "Select the major divisions of the comparison groups.\n\nExample:\n* Experiment\n* Cell line\n* Batch\n* Patient",
-        "factorName": "Experiment",
+        "description": "Select factor(s) that identify separate pairing within which the fold change should be calculated. \n\nExample:\n* Barcode\n* Cell line\n* Replicate\n* Supergroup",
+        "factorName": "Pairing Factor",
         "factors": [
           {
             "kind": "Factor",
-            "name": "js0.Cell line",
+            "name": "ds0.Barcode",
             "type": "string"
           }
         ],
@@ -376,12 +376,12 @@
         "name": "Group",
         "type": "string",
         "isSingle": false,
-        "description": "Select the comparison groups.\n\nExample:\n* Treatment off chip",
-        "factorName": "Treatment",
+        "description": "Select the factor that defines the comparison groups.\n\nExample:\n* Test Condition\n* Treatment off chip",
+        "factorName": "Test Condition",
         "factors": [
           {
             "kind": "Factor",
-            "name": "js0.Treatment off chip",
+            "name": "js0.Test Condition",
             "type": "string"
           }
         ],
@@ -392,8 +392,8 @@
         "name": "Pair",
         "type": "string",
         "isSingle": false,
-        "description": "Select the correlation within the comparison groups.\n\nExample:\n* Barcode\n* Patient",
-        "factorName": "Pairing Factor",
+        "description": "Leave blank",
+        "factorName": "Skip step",
         "factors": [
           {
             "kind": "Factor",
@@ -408,7 +408,7 @@
       {
         "kind": "MappingFilter",
         "name": "Group",
-        "description": "Select the control value in the comparison group.\n\nExample:\n* DMSO\n* WT",
+        "description": "Select the factor which defines the control.\n\nExample:\n* C-(DMSO, WT, Control)",
         "namedFilter": {
           "kind": "NamedFilter",
           "logical": "and",
@@ -417,10 +417,10 @@
             {
               "kind": "FilterExpr",
               "filterOp": "equals",
-              "stringValue": "Control",
+              "stringValue": "",
               "factor": {
                 "kind": "Factor",
-                "name": "js0.Treatment off chip",
+                "name": "js0.Test Condition",
                 "type": "string"
               }
             }
@@ -443,12 +443,12 @@
         "name": "Measurement",
         "type": "double",
         "isSingle": true,
-        "description": "Select the values to use in the computation.\n\nExample:\n* log transform of S100",
+        "description": "Select the factor that defines the values to use in the computation.\n\nExample:\n* log transform of S100\n* log transformed and ComBat Corrected S100\n* VSN transformed S100\n* VSN transformed and ComBat Corrected S100",
         "factorName": "Quantitation Type",
         "factors": [
           {
             "kind": "Factor",
-            "name": "ds6.logTransformed",
+            "name": "",
             "type": "double"
           }
         ],
@@ -475,12 +475,12 @@
         "name": "Supergroup",
         "type": "string",
         "isSingle": false,
-        "description": "Select the major divisions of the comparison groups.\n\nExample:\n* Experiment\n* Cell line\n* Batch\n* Patient",
-        "factorName": "Experiment",
+        "description": "Select factor(s) that identify separate pairing within which the fold change should be calculated. \n\nExample:\n* Barcode\n* Cell line\n* Replicate\n* Supergroup",
+        "factorName": "Pairing Factor",
         "factors": [
           {
             "kind": "Factor",
-            "name": "js0.Cell line",
+            "name": "ds0.Barcode",
             "type": "string"
           }
         ],
@@ -491,12 +491,12 @@
         "name": "Group",
         "type": "string",
         "isSingle": false,
-        "description": "Select the comparison groups.\n\nExample:\n* Treatment off chip",
-        "factorName": "Treatment",
+        "description": "Select the factor that defines the comparison groups.\n\nExample:\n* Test Condition\n* Treatment off chip",
+        "factorName": "Test Condition",
         "factors": [
           {
             "kind": "Factor",
-            "name": "js0.Treatment off chip",
+            "name": "js0.Test Condition",
             "type": "string"
           }
         ],
@@ -507,12 +507,12 @@
         "name": "Pair",
         "type": "string",
         "isSingle": false,
-        "description": "Select the correlation within the comparison groups.\n\nExample:\n* Barcode\n* Patient",
-        "factorName": "Pairing Factor",
+        "description": "Leave blank",
+        "factorName": "Skip step",
         "factors": [
           {
             "kind": "Factor",
-            "name": "ds0.Barcode",
+            "name": "",
             "type": "string"
           }
         ],
@@ -523,7 +523,7 @@
       {
         "kind": "MappingFilter",
         "name": "Group",
-        "description": "Select the control value in the comparison group.\n\nExample:\n* DMSO\n* WT",
+        "description": "Select the factor which defines the control.\n\nExample:\n* C-(DMSO, WT, Control)",
         "namedFilter": {
           "kind": "NamedFilter",
           "logical": "and",
@@ -532,10 +532,10 @@
             {
               "kind": "FilterExpr",
               "filterOp": "equals",
-              "stringValue": "Control",
+              "stringValue": "",
               "factor": {
                 "kind": "Factor",
-                "name": "js0.Treatment off chip",
+                "name": "js0.Test Condition",
                 "type": "string"
               }
             }
@@ -558,12 +558,12 @@
         "name": "Measurement",
         "type": "double",
         "isSingle": true,
-        "description": "Select the values to use in the computation.\n\nExample:\n* log transform of S100",
+        "description": "Select the factor that defines the values to use in the computation.\n\nExample:\n* log transform of S100\n* log transformed and ComBat Corrected S100\n* VSN transformed S100\n* VSN transformed and ComBat Corrected S100",
         "factorName": "Quantitation Type",
         "factors": [
           {
             "kind": "Factor",
-            "name": "ds6.logTransformed",
+            "name": "",
             "type": "double"
           }
         ],
@@ -574,12 +574,12 @@
         "name": "Group",
         "type": "string",
         "isSingle": true,
-        "description": "Select the comparison groups.\n\nExample:\n* Treatment off chip",
-        "factorName": "Treatment",
+        "description": "Select the factor that defines the comparison groups.\n\nExample:\n* Test Condition\n* Treatment off chip",
+        "factorName": "Test Condition",
         "factors": [
           {
             "kind": "Factor",
-            "name": "js0.Treatment off chip",
+            "name": "js0.Test Condition",
             "type": "string"
           }
         ],
@@ -606,12 +606,12 @@
         "name": "Supergroup",
         "type": "string",
         "isSingle": false,
-        "description": "Select the major divisions of the comparison groups.\n\nExample:\n* Experiment\n* Cell line\n* Batch\n* Patient",
-        "factorName": "Experiment",
+        "description": "Select a factor that identifies the Supergroup. Supergroup(s) define each comparison group for which t-tests should be calculated. Leave blank if there is only one comparison group. \n\nExample:\n* Supergroup\n* Cell line\n* Genotype",
+        "factorName": "Supergroup",
         "factors": [
           {
             "kind": "Factor",
-            "name": "js0.Cell line",
+            "name": "js0.Supergroup",
             "type": "string"
           }
         ],
@@ -622,8 +622,8 @@
         "name": "Observation",
         "type": "string",
         "isSingle": false,
-        "description": "Select a single set of data for the analysis.\n\nExample:\n* Barcode and Row\n* Barcode and Array",
-        "factorName": "Individual observation",
+        "description": "Select the factor(s) defining a single value per cell.\n\nExample:\n* Barcode and Row\n* Barcode and Array\n * Sample Name",
+        "factorName": "Single Data Value per Cell",
         "factors": [
           {
             "kind": "Factor",
@@ -653,12 +653,12 @@
         "name": "Measurement",
         "type": "double",
         "isSingle": true,
-        "description": "Select the values to use in the computation.\n\nExample:\n* log transform of S100",
+        "description": "Select the factor that defines the values to use in the computation.\n\nExample:\n* log transform of S100\n* log transformed and ComBat Corrected S100\n* VSN transformed S100\n* VSN transformed and ComBat Corrected S100",
         "factorName": "Quantitation Type",
         "factors": [
           {
             "kind": "Factor",
-            "name": "ds6.logTransformed",
+            "name": "",
             "type": "double"
           }
         ],
@@ -669,12 +669,12 @@
         "name": "Group",
         "type": "string",
         "isSingle": true,
-        "description": "Select the comparison groups.\n\nExample:\n* Treatment off chip",
-        "factorName": "Treatment",
+        "description": "Select the factor that defines the comparison groups.\n\nExample:\n* Test Condition\n* Treatment off chip",
+        "factorName": "Test Condition",
         "factors": [
           {
             "kind": "Factor",
-            "name": "js0.Treatment off chip",
+            "name": "js0.Test Condition",
             "type": "string"
           }
         ],
@@ -701,12 +701,12 @@
         "name": "Supergroup",
         "type": "string",
         "isSingle": false,
-        "description": "Select the major divisions of the comparison groups.\n\nExample:\n* Experiment\n* Cell line\n* Batch\n* Patient",
-        "factorName": "Experiment",
+        "description": "Select a factor that identifies the Supergroup. Supergroup(s) define each comparison group for which t-tests should be calculated. Leave blank if there is only one comparison group. \n\nExample:\n* Supergroup\n* Cell line\n* Genotype",
+        "factorName": "Supergroup",
         "factors": [
           {
             "kind": "Factor",
-            "name": "js0.Cell line",
+            "name": "js0.Supergroup",
             "type": "string"
           }
         ],
@@ -717,7 +717,7 @@
         "name": "Pair",
         "type": "string",
         "isSingle": false,
-        "description": "Select the correlation within the comparison groups.\n\nExample:\n* Barcode\n* Patient",
+        "description": "Select the factor which defines the pairing.\n\nExample:\n* Barcode\n* Cell line\n* Replicate\n* Supergroup",
         "factorName": "Pairing Factor",
         "factors": [
           {
@@ -733,8 +733,8 @@
         "name": "Observation",
         "type": "string",
         "isSingle": false,
-        "description": "Select a single set of data for the analysis.\n\nExample:\n* Barcode and Row\n* Barcode and Array",
-        "factorName": "Individual observation",
+        "description": "Select the factor(s) defining a single value per cell.\n\nExample:\n* Barcode and Row\n* Barcode and Array\n * Sample Name",
+        "factorName": "Single Data Value per Cell",
         "factors": [
           {
             "kind": "Factor",
@@ -755,7 +755,7 @@
   {
     "kind": "AppDesign",
     "namespace": "MTVC",
-    "description": "Performs a statistical comparison of one control vs muliptle treatment conditions.",
+    "description": "",
     "name": "mtvc.c06_groups_pairing_control",
     "type": "mtvc.c06_groups_pairing_control",
     "factors": [
@@ -764,12 +764,12 @@
         "name": "Measurement",
         "type": "double",
         "isSingle": true,
-        "description": "Select the values to use in the computation.\n\nExample:\n* log transform of S100",
+        "description": "Select the factor that defines the values to use in the computation.\n\nExample:\n* log transform of S100\n* log transformed and ComBat Corrected S100\n* VSN transformed S100\n* VSN transformed and ComBat Corrected S100",
         "factorName": "Quantitation Type",
         "factors": [
           {
             "kind": "Factor",
-            "name": "ds6.logTransformed",
+            "name": "",
             "type": "double"
           }
         ],
@@ -780,12 +780,12 @@
         "name": "Group",
         "type": "string",
         "isSingle": false,
-        "description": "Select the comparison groups.\n\nExample:\n* Treatment off chip",
-        "factorName": "Treatment",
+        "description": "Select the factor that defines the comparison groups.\n\nExample:\n* Test Condition\n* Treatment off chip",
+        "factorName": "Test Condition",
         "factors": [
           {
             "kind": "Factor",
-            "name": "js0.Treatment off chip",
+            "name": "js0.Test Condition",
             "type": "string"
           }
         ],
@@ -812,8 +812,8 @@
         "name": "Observation",
         "type": "string",
         "isSingle": false,
-        "description": "Select a single set of data for the analysis.\n\nExample:\n* Barcode and Row\n* Barcode and Array",
-        "factorName": "Individual observation",
+        "description": "Select the factor(s) defining a single value per cell.\n\nExample:\n* Barcode and Row\n* Barcode and Array\n* Sample Name",
+        "factorName": "Single Data Value per Cell",
         "factors": [
           {
             "kind": "Factor",
@@ -833,12 +833,12 @@
         "name": "Pair",
         "type": "string",
         "isSingle": false,
-        "description": "Select the correlation within the comparison groups.\n\nExample:\n* Barcode\n* Patient",
+        "description": "Select the factor which defines the pairing (if applicable). \n\nExample:\n* Barcode\n* Cell line\n* Replicate\n* Supergroup",
         "factorName": "Pairing Factor",
         "factors": [
           {
             "kind": "Factor",
-            "name": "ds0.Barcode",
+            "name": "",
             "type": "string"
           }
         ],
@@ -849,7 +849,7 @@
       {
         "kind": "MappingFilter",
         "name": "Control",
-        "description": "Select the control value in the comparison group.\n\nExample:\n* DMSO\n* WT",
+        "description": "Select the factor which defines the control.\n\nExample:\n* C-(DMSO, WT, Control)",
         "namedFilter": {
           "kind": "NamedFilter",
           "logical": "and",
@@ -861,7 +861,7 @@
               "stringValue": "Control",
               "factor": {
                 "kind": "Factor",
-                "name": "js0.Treatment off chip",
+                "name": "js0.Test Condition",
                 "type": "string"
               }
             }
@@ -884,12 +884,12 @@
         "name": "Measurement",
         "type": "double",
         "isSingle": true,
-        "description": "Select the values use in the computation.\n\nExample:\n* log transform of S100",
+        "description": "Select the factor that defines the values to use in the computation.\n\nExample:\n* log transform of S100\n* log transformed and ComBat Corrected S100\n* VSN transformed S100\n* VSN transformed and ComBat Corrected S100",
         "factorName": "Quantitation Type",
         "factors": [
           {
             "kind": "Factor",
-            "name": "ds6.logTransformed",
+            "name": "",
             "type": "double"
           }
         ],
@@ -916,12 +916,12 @@
         "name": "Group",
         "type": "string",
         "isSingle": false,
-        "description": "Select the grouping factor for the comparison.\n\nExample:\n* Treatment off chip",
-        "factorName": "Treatment",
+        "description": "Select the factor that defines the comparison groups.\n\nExample:\n* Test Condition\n* Treatment off chip",
+        "factorName": "Test Condition",
         "factors": [
           {
             "kind": "Factor",
-            "name": "js0.Treatment off chip",
+            "name": "js0.Test Condition",
             "type": "string"
           }
         ],
@@ -932,8 +932,8 @@
         "name": "Observation",
         "type": "string",
         "isSingle": false,
-        "description": "Select (a) factor(s) that identify single observations in the analysis.\n\nExample:\n* Cell line\n* Subject \n* Barcode and Array",
-        "factorName": "Individual observation",
+        "description": "Select the factor(s) defining a single value per cell.\n\nExample:\n* Barcode and Row\n* Barcode and Array\n* Sample Name",
+        "factorName": "Single Data Value per Cell",
         "factors": [
           {
             "kind": "Factor",
@@ -963,7 +963,7 @@
         "name": "Measurement",
         "type": "double",
         "isSingle": true,
-        "description": "Select the values to use in the computation.\n\nExample:\n* Median_SigmBg\n* Any computed value",
+        "description": "Select the factor that defines the values to use in the computation.\n\nExample:\n* Median_SigmBg\n* Any computed value",
         "factorName": "Quantitation Type",
         "factors": [
           {
@@ -995,7 +995,7 @@
         "name": "Variable",
         "type": "string",
         "isSingle": false,
-        "description": "Select the peptide name.\n\nExample:\n* ID",
+        "description": "Select the peptide identifier.\n\nExample:\n* ID",
         "factorName": "Peptide",
         "factors": [
           {
