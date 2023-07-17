@@ -1074,6 +1074,11 @@
         "factors": [
           {
             "kind": "Factor",
+            "name": "js0.Test Condition",
+            "type": "string"
+          },
+          {
+            "kind": "Factor",
             "name": "ds0.Barcode",
             "type": "string"
           },
@@ -1081,11 +1086,6 @@
             "kind": "Factor",
             "name": "ds0.Row",
             "type": "double"
-          },
-          {
-            "kind": "Factor",
-            "name": "js0.Test Condition",
-            "type": "string"
           }
         ],
         "isRequired": true
