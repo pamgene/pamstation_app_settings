@@ -1058,7 +1058,7 @@
         "factors": [
           {
             "kind": "Factor",
-            "name": "ds1.ID",
+            "name": "S100QC.ID",
             "type": "string"
           }
         ],
@@ -1081,6 +1081,11 @@
             "kind": "Factor",
             "name": "ds0.Row",
             "type": "double"
+          },
+          {
+            "kind": "Factor",
+            "name": "js0.Test Condition",
+            "type": "string"
           }
         ],
         "isRequired": true
