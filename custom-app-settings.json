@@ -579,7 +579,7 @@
         "factors": [
           {
             "kind": "Factor",
-            "name": "js0.Test Condition",
+            "name": "",
             "type": "string"
           }
         ],
@@ -597,6 +597,11 @@
             "kind": "Factor",
             "name": "ds1.ID",
             "type": "string"
+          },
+          {
+            "kind": "Factor",
+            "name": "js0.UniprotAccession",
+            "type": "string"
           }
         ],
         "isRequired": true
@@ -611,7 +616,7 @@
         "factors": [
           {
             "kind": "Factor",
-            "name": "js0.Supergroup",
+            "name": "",
             "type": "string"
           }
         ],
