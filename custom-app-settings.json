@@ -464,6 +464,11 @@
         "factors": [
           {
             "kind": "Factor",
+            "name": "js0.UniprotAccession",
+            "type": "string"
+          },
+          {
+            "kind": "Factor",
             "name": "ds1.ID",
             "type": "string"
           }
@@ -475,12 +480,12 @@
         "name": "Supergroup",
         "type": "string",
         "isSingle": false,
-        "description": "Select factor(s) that identify separate pairing within which the fold change should be calculated. \n\nExample:\n* Barcode\n* Cell line\n* Replicate\n* Supergroup",
+        "description": "Select factor(s) that identify separate pairing within which the fold change should be calculated. Pairing factor can NOT be the same as observation, such as Barcode + Row. \n\nExample:\n* Cell line\n* Replicate\n* Supergroup",
         "factorName": "Pairing Factor",
         "factors": [
           {
             "kind": "Factor",
-            "name": "ds0.Barcode",
+            "name": "",
             "type": "string"
           }
         ],
