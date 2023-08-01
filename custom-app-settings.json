@@ -229,7 +229,7 @@
         "factors": [
           {
             "kind": "Factor",
-            "name": "ETS.ds1.S100",
+            "name": "VSN.norm",
             "type": "double"
           }
         ],
