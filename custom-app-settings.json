@@ -528,8 +528,8 @@
     "kind": "AppDesign",
     "namespace": "FC",
     "description": "Calculates the ratio (fold change) between a control and treatment condition.",
-    "name": "fc.2groups_super_pairing_control",
-    "type": "fc.2groups_super_pairing_control",
+    "name": "fc.c07_super_2group_control_pair",
+    "type": "fc.c07_super_2group_control_pair",
     "factors": [
       {
         "kind": "MappingFactor",
@@ -605,8 +605,8 @@
         "name": "Pair",
         "type": "string",
         "isSingle": false,
-        "description": "Leave blank",
-        "factorName": "Skip step",
+        "description": "Select the factor that defines the pairing between observations.\n\nExample:\n* pair\n* Replicate",
+        "factorName": "Pair",
         "factors": [
           {
             "kind": "Factor",
@@ -630,7 +630,7 @@
             {
               "kind": "FilterExpr",
               "filterOp": "equals",
-              "stringValue": "",
+              "stringValue": "Control",
               "factor": {
                 "kind": "Factor",
                 "name": "js0.Test Condition",
