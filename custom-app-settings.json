@@ -574,7 +574,7 @@
         "type": "string",
         "isSingle": false,
         "description": "Select factor(s) that identify separate pairing within which the fold change should be calculated. Pairing factor can NOT be the same as observation, such as Barcode + Row. \n\nExample:\n* Cell line\n* Replicate\n* Supergroup",
-        "factorName": "Pairing Factor",
+        "factorName": "Supergroup",
         "factors": [
           {
             "kind": "Factor",
