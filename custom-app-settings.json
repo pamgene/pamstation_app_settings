@@ -1061,6 +1061,64 @@
   },
   {
     "kind": "AppDesign",
+    "namespace": "UKA_FC",
+    "description": "Find kinase activity changes from differential peptide phosphorylation.",
+    "name": "uka_fc.c03_simple",
+    "type": "uka_fc.c03_simple",
+    "factors": [
+      {
+        "kind": "MappingFactor",
+        "name": "Measurement",
+        "type": "double",
+        "isSingle": true,
+        "description": "Select the factor that defines the values to use in the computation.\n\nExample:\n* log transform of S100\n* log transformed and ComBat Corrected S100\n* VSN transformed S100\n* VSN transformed and ComBat Corrected S100",
+        "factorName": "Quantitation Type",
+        "factors": [
+          {
+            "kind": "Factor",
+            "name": "",
+            "type": "double"
+          }
+        ],
+        "isRequired": true
+      },
+      {
+        "kind": "MappingFactor",
+        "name": "Variable",
+        "type": "string",
+        "isSingle": false,
+        "description": "Select the peptide identifier.\n\nExample:\n* ID",
+        "factorName": "Peptide",
+        "factors": [
+          {
+            "kind": "Factor",
+            "name": "ds1.ID",
+            "type": "string"
+          }
+        ],
+        "isRequired": true
+      },
+      {
+        "kind": "MappingFactor",
+        "name": "Observation",
+        "type": "string",
+        "isSingle": false,
+        "description": "Select the factor(s) defining a single value per cell.",
+        "factorName": "Single Data Value per Cell",
+        "factors": [
+          {
+            "kind": "Factor",
+            "name": "",
+            "type": "string"
+          }
+        ],
+        "isRequired": true
+      }
+    ],
+    "filters": []
+  },
+  {
+    "kind": "AppDesign",
     "namespace": "DRC",
     "description": "Performs a Dose Response Curve fitting of the data.",
     "name": "drc.c05_groups_series",
