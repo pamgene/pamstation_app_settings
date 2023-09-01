@@ -1005,7 +1005,7 @@
       },
       {
         "kind": "MappingFactor",
-        "name": "ID",
+        "name": "Variable",
         "type": "string",
         "isSingle": false,
         "description": "Select the peptide identifier.\n\nExample:\n* ID",
