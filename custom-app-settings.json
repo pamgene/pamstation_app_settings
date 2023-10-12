@@ -434,13 +434,6 @@
         "isSingle": true,
         "description": "Select the factor that defines the values to use in the computation.\n\nExample:\n* log transform of S100\n* log transformed and ComBat Corrected S100\n* VSN transformed S100\n* VSN transformed and ComBat Corrected S100",
         "factorName": "Quantitation Type",
-        "factors": [
-          {
-            "kind": "Factor",
-            "name": "",
-            "type": "double"
-          }
-        ],
         "isRequired": true
       },
       {
@@ -554,13 +547,6 @@
         "isSingle": true,
         "description": "Select the factor that defines the values to use in the computation.\n\nExample:\n* log transform of S100\n* log transformed and ComBat Corrected S100\n* VSN transformed S100\n* VSN transformed and ComBat Corrected S100",
         "factorName": "Quantitation Type",
-        "factors": [
-          {
-            "kind": "Factor",
-            "name": "",
-            "type": "double"
-          }
-        ],
         "isRequired": true
       },
       {
@@ -654,13 +640,6 @@
         "isSingle": true,
         "description": "Select the factor that defines the values to use in the computation.\n\nExample:\n* log transform of S100\n* log transformed and ComBat Corrected S100\n* VSN transformed S100\n* VSN transformed and ComBat Corrected S100",
         "factorName": "Quantitation Type",
-        "factors": [
-          {
-            "kind": "Factor",
-            "name": "",
-            "type": "double"
-          }
-        ],
         "isRequired": true
       },
       {
@@ -770,13 +749,6 @@
         "isSingle": true,
         "description": "Select the factor that defines the values to use in the computation.\n\nExample:\n* log transform of S100\n* log transformed and ComBat Corrected S100\n* VSN transformed S100\n* VSN transformed and ComBat Corrected S100",
         "factorName": "Quantitation Type",
-        "factors": [
-          {
-            "kind": "Factor",
-            "name": "",
-            "type": "double"
-          }
-        ],
         "isRequired": true
       },
       {
@@ -890,13 +862,6 @@
         "isSingle": true,
         "description": "Select the factor that defines the values to use in the computation.\n\nExample:\n* log transform of S100\n* log transformed and ComBat Corrected S100\n* VSN transformed S100\n* VSN transformed and ComBat Corrected S100",
         "factorName": "Quantitation Type",
-        "factors": [
-          {
-            "kind": "Factor",
-            "name": "",
-            "type": "double"
-          }
-        ],
         "isRequired": true
       },
       {
@@ -969,13 +934,6 @@
         "isSingle": true,
         "description": "Select the factor that defines the values to use in the computation.\n\nExample:\n* log transform of S100\n* log transformed and ComBat Corrected S100\n* VSN transformed S100\n* VSN transformed and ComBat Corrected S100",
         "factorName": "Quantitation Type",
-        "factors": [
-          {
-            "kind": "Factor",
-            "name": "",
-            "type": "double"
-          }
-        ],
         "isRequired": true
       },
       {
@@ -1027,13 +985,6 @@
         "isSingle": true,
         "description": "Select the factor that defines the values to use in the computation.\n\nExample:\n* Median_SigmBg\n* Any computed value",
         "factorName": "Quantitation Type",
-        "factors": [
-          {
-            "kind": "Factor",
-            "name": "ds6.logTransformed",
-            "type": "double"
-          }
-        ],
         "isRequired": true
       },
       {
@@ -1041,7 +992,7 @@
         "name": "Series",
         "type": "double",
         "isSingle": true,
-        "description": "Select the compound concentration\n\nExample:\n* Compound concentration",
+        "description": "Select the compound concentration in LogM \n\nExample:\n* Compound concentration LogM",
         "factorName": "Concentration Series",
         "factors": [
           {
@@ -1082,7 +1033,7 @@
             "type": "string"
           }
         ],
-        "isRequired": true
+        "isRequired": false
       }
     ],
     "filters": []
@@ -1101,13 +1052,6 @@
         "isSingle": true,
         "description": "Select the factor that defines the values to use in the computation.\n\nExample:\n* S100QC.logTransformed",
         "factorName": "Quantitation Type",
-        "factors": [
-          {
-            "kind": "Factor",
-            "name": "",
-            "type": "double"
-          }
-        ],
         "isRequired": true
       },
       {
