@@ -342,11 +342,6 @@
         "factors": [
           {
             "kind": "Factor",
-            "name": "js0.UniprotAccession",
-            "type": "string"
-          },
-          {
-            "kind": "Factor",
             "name": "ds1.ID",
             "type": "string"
           }
@@ -452,11 +447,6 @@
             "kind": "Factor",
             "name": "ds1.ID",
             "type": "string"
-          },
-          {
-            "kind": "Factor",
-            "name": "js0.UniprotAccession",
-            "type": "string"
           }
         ],
         "isRequired": true
@@ -537,11 +527,6 @@
           {
             "kind": "Factor",
             "name": "ds1.ID",
-            "type": "string"
-          },
-          {
-            "kind": "Factor",
-            "name": "js0.UniprotAccession",
             "type": "string"
           }
         ],
