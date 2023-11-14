@@ -812,6 +812,91 @@
   },
   {
     "kind": "AppDesign",
+    "namespace": "UKA_TT",
+    "description": "Find kinase activity changes from differential peptide phosphorylation.",
+    "name": "UKA_TT.c06_super_2group_control",
+    "type": "UKA_TT.c06_super_2group_control",
+    "factors": [
+      {
+        "kind": "MappingFactor",
+        "name": "Measurement",
+        "type": "double",
+        "isSingle": true,
+        "description": "Select the factor that defines the values to use in the computation.\n\nExample:\n* log transform of S100\n* log transformed and ComBat Corrected S100\n* VSN transformed S100\n* VSN transformed and ComBat Corrected S100",
+        "factorName": "Quantitation Type",
+        "isRequired": true
+      },
+      {
+        "kind": "MappingFactor",
+        "name": "Variable",
+        "type": "string",
+        "isSingle": false,
+        "description": "Select the peptide identifier.\n\nExample:\n* ID",
+        "factorName": "Peptide",
+        "factors": [
+          {
+            "kind": "Factor",
+            "name": "ds1.ID",
+            "type": "string"
+          }
+        ],
+        "isRequired": true
+      },
+      {
+        "kind": "MappingFactor",
+        "name": "Supergroup",
+        "type": "string",
+        "isSingle": false,
+        "description": "Select a factor that identifies the Supergroup. Supergroup(s) define each comparison group for which UKA should be run. \n\nExample:\n* Supergroup\n* Replicate\n* Cell line",
+        "factorName": "Supergroup",
+        "isRequired": false
+      },
+      {
+        "kind": "MappingFactor",
+        "name": "Group",
+        "type": "string",
+        "isSingle": false,
+        "description": "Select the factor that defines the comparison groups.\n\nExample:\n* Test Condition\n* Treatment off chip",
+        "factorName": "Test Condition",
+        "factors": [
+          {
+            "kind": "Factor",
+            "name": "js0.Test Condition",
+            "type": "string"
+          }
+        ],
+        "isRequired": true
+      }
+    ],
+    "filters": [
+      {
+        "kind": "MappingFilter",
+        "name": "Group = Control",
+        "description": "Select the factor which defines the control.\n\nExample:\n* C-(DMSO, WT, Control)",
+        "namedFilter": {
+          "kind": "NamedFilter",
+          "logical": "and",
+          "not": false,
+          "filterExprs": [
+            {
+              "kind": "FilterExpr",
+              "filterOp": "equals",
+              "stringValue": "Control",
+              "factor": {
+                "kind": "Factor",
+                "name": "js0.Test Condition",
+                "type": "string"
+              }
+            }
+          ],
+          "name": "Group = Control"
+        },
+        "isRequired": false
+      }
+    ]
+  },
+  {
+    "kind": "AppDesign",
     "namespace": "DRC",
     "description": "Performs a Dose Response Curve fitting of the data.",
     "name": "drc.c05_groups_series",
