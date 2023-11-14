@@ -866,12 +866,33 @@
           }
         ],
         "isRequired": true
+      },
+      {
+        "kind": "MappingFactor",
+        "name": "Observation",
+        "type": "string",
+        "isSingle": false,
+        "description": "Select the factor(s) defining a single value per cell.\n\nExample:\n* Barcode and Row\n* Barcode and Array\n * Sample Name",
+        "factorName": "Single Data Value per Cell",
+        "factors": [
+          {
+            "kind": "Factor",
+            "name": "ds0.Barcode",
+            "type": "string"
+          },
+          {
+            "kind": "Factor",
+            "name": "ds0.Row",
+            "type": "double"
+          }
+        ],
+        "isRequired": true
       }
     ],
     "filters": [
       {
         "kind": "MappingFilter",
-        "name": "Group = Control",
+        "name": "Control",
         "description": "Select the factor which defines the control.\n\nExample:\n* C-(DMSO, WT, Control)",
         "namedFilter": {
           "kind": "NamedFilter",
@@ -889,9 +910,9 @@
               }
             }
           ],
-          "name": "Group = Control"
+          "name": "Control"
         },
-        "isRequired": false
+        "isRequired": true
       }
     ]
   },
