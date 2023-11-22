@@ -507,13 +507,6 @@
         "isSingle": true,
         "description": "Select the factor that defines the comparison groups.\n\nExample:\n* Test Condition\n* Treatment off chip",
         "factorName": "Test Condition",
-        "factors": [
-          {
-            "kind": "Factor",
-            "name": "js0.Test Condition",
-            "type": "string"
-          }
-        ],
         "isRequired": true
       },
       {
@@ -539,13 +532,6 @@
         "isSingle": false,
         "description": "Select a factor that identifies the Supergroup. Supergroup(s) define each comparison group for which t-tests should be calculated. Leave blank if there is only one comparison group. \n\nExample:\n* Supergroup\n* Cell line\n* Genotype",
         "factorName": "Supergroup",
-        "factors": [
-          {
-            "kind": "Factor",
-            "name": "js0.Supergroup",
-            "type": "string"
-          }
-        ],
         "isRequired": false
       },
       {
@@ -812,10 +798,10 @@
   },
   {
     "kind": "AppDesign",
-    "namespace": "UKA_TT",
+    "namespace": "UKA_TGC",
     "description": "Find kinase activity changes from differential peptide phosphorylation.",
-    "name": "UKA_TT.c06_super_2group_control",
-    "type": "UKA_TT.c06_super_2group_control",
+    "name": "UKA_TGC.c06_super_2group_control",
+    "type": "UKA_TGC.c06_super_2group_control",
     "factors": [
       {
         "kind": "MappingFactor",
@@ -1037,7 +1023,7 @@
       },
       {
         "kind": "MappingFilter",
-        "name": "Group != Control",
+        "name": "Group !=Control",
         "description": "Select the factor which defines the Test condition.",
         "namedFilter": {
           "kind": "NamedFilter",
@@ -1055,7 +1041,7 @@
               }
             }
           ],
-          "name": "Group != Control"
+          "name": "Group !=Control"
         },
         "isRequired": true
       }
