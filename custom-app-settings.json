@@ -756,8 +756,8 @@
     "kind": "AppDesign",
     "namespace": "UKA_FC",
     "description": "Find kinase activity changes from differential peptide phosphorylation.",
-    "name": "uka_fc.c03_simple",
-    "type": "uka_fc.c03_simple",
+    "name": "uka.c03_simple",
+    "type": "uka.c03_simple",
     "factors": [
       {
         "kind": "MappingFactor",
@@ -844,13 +844,6 @@
         "isSingle": false,
         "description": "Select the factor that defines the comparison groups.\n\nExample:\n* Test Condition\n* Treatment off chip",
         "factorName": "Test Condition",
-        "factors": [
-          {
-            "kind": "Factor",
-            "name": "js0.Test Condition",
-            "type": "string"
-          }
-        ],
         "isRequired": true
       },
       {
@@ -878,7 +871,7 @@
     "filters": [
       {
         "kind": "MappingFilter",
-        "name": "Control",
+        "name": "Group = Control",
         "description": "Select the factor which defines the control.\n\nExample:\n* C-(DMSO, WT, Control)",
         "namedFilter": {
           "kind": "NamedFilter",
@@ -896,7 +889,7 @@
               }
             }
           ],
-          "name": "Control"
+          "name": "Group = Control"
         },
         "isRequired": true
       },
