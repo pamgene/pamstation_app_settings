@@ -666,7 +666,7 @@
             {
               "kind": "FilterExpr",
               "filterOp": "equals",
-              "stringValue": "Control",
+              "stringValue": "",
               "factor": {
                 "kind": "Factor",
                 "name": "js0.Test Condition",
