@@ -650,7 +650,7 @@
         "isSingle": false,
         "description": "Select the factor which defines the pairing (if applicable). \n\nExample:\n* Barcode\n* Cell line\n* Replicate\n* Supergroup",
         "factorName": "Pairing Factor",
-        "isRequired": true
+        "isRequired": false
       }
     ],
     "filters": [
