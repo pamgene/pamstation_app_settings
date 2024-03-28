@@ -1166,5 +1166,104 @@
         "isRequired": true
       }
     ]
+  },
+  {
+    "kind": "AppDesign",
+    "namespace": "ukabarplot",
+    "description": "Takes top hits by Median Final Score and creates barplots colored by Specificity Score.",
+    "name": "Heatmap.c03_simple",
+    "type": "Heatmap.c03_simple",
+    "factors": [
+      {
+        "kind": "MappingFactor",
+        "name": "Median Final score",
+        "type": "double",
+        "isSingle": true,
+        "description": "Select the factor that defines the Median Final score",
+        "factorName": "Median Final score",
+        "factors": [
+          {
+            "kind": "Factor",
+            "name": "Median Final score",
+            "type": "double"
+          }
+        ],
+        "isRequired": true
+      },
+      {
+        "kind": "MappingFactor",
+        "name": "Median Kinase Statistic",
+        "type": "double",
+        "isSingle": false,
+        "description": "Select the Median Kinase Statistic",
+        "factorName": "Median Kinase Statistic",
+        "factors": [
+          {
+            "kind": "Factor",
+            "name": "Median Kinase Statistic",
+            "type": "double"
+          }
+        ],
+        "isRequired": true
+      },
+      {
+        "kind": "MappingFactor",
+        "name": "Kinase Name",
+        "type": "string",
+        "isSingle": false,
+        "description": "Select the factor defining the Kinase.\n\nExample:\n* Kinase Name\n* Kinase UniprotID",
+        "factorName": "Kinase Name",
+        "factors": [
+          {
+            "kind": "Factor",
+            "name": "Kinase Name",
+            "type": "string"
+          }
+        ],
+        "isRequired": true
+      },
+      {
+        "kind": "MappingFactor",
+        "name": "Mean Specificity Score",
+        "type": "double",
+        "isSingle": false,
+        "description": "Select the Mean Specificity Score",
+        "factorName": "Mean Specificity Score",
+        "factors": [
+          {
+            "kind": "Factor",
+            "name": "Mean Specificity Score",
+            "type": "double"
+          }
+        ],
+        "isRequired": true
+      }
+    ],
+    "filters": [
+      {
+        "kind": "MappingFilter",
+        "name": "Median Final score",
+        "description": "Select the filtering condition for a significant Median Final score, e.g. Median Final score > 1.3",
+        "namedFilter": {
+          "kind": "NamedFilter",
+          "logical": "and",
+          "not": false,
+          "filterExprs": [
+            {
+              "kind": "FilterExpr",
+              "filterOp": "greater",
+              "stringValue": "1.3",
+              "factor": {
+                "kind": "Factor",
+                "name": "Median Final score",
+                "type": "double"
+              }
+            }
+          ],
+          "name": "Median Final score"
+        },
+        "isRequired": true
+      }
+    ]
   }
 ]
