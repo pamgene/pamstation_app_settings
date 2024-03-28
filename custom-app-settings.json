@@ -1171,8 +1171,8 @@
     "kind": "AppDesign",
     "namespace": "ukabarplot",
     "description": "Takes top hits by Median Final Score and creates barplots colored by Specificity Score.",
-    "name": "Heatmap.c03_simple",
-    "type": "Heatmap.c03_simple",
+    "name": "ukabarplot.simple",
+    "type": "ukabarplot.simple",
     "factors": [
       {
         "kind": "MappingFactor",
