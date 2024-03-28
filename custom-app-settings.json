@@ -1016,7 +1016,7 @@
       },
       {
         "kind": "MappingFilter",
-        "name": "Group !=Control",
+        "name": "Group not Control",
         "description": "Select the factor which defines the Test condition.",
         "namedFilter": {
           "kind": "NamedFilter",
@@ -1034,7 +1034,7 @@
               }
             }
           ],
-          "name": "Group !=Control"
+          "name": "Group not Control"
         },
         "isRequired": true
       }
