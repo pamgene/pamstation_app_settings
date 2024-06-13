@@ -1420,7 +1420,7 @@
     "factors": [
       {
         "kind": "MappingFactor",
-        "name": "S100",
+        "name": "Measurement",
         "type": "double",
         "isSingle": true,
         "description": "Select the factor that defines the values to use in the computation.\n\nExample:\n* S100QC.logTransformed",
@@ -1436,7 +1436,7 @@
       },
       {
         "kind": "MappingFactor",
-        "name": "ID",
+        "name": "Variable",
         "type": "string",
         "isSingle": false,
         "description": "Select the peptide identifier.\n\nExample:\n* ID (default)",
@@ -1470,6 +1470,22 @@
           }
         ],
         "isRequired": true
+      },
+      {
+        "kind": "MappingFactor",
+        "name": "Series",
+        "type": "double",
+        "isSingle": true,
+        "description": "Select the factor that defines cycle. \n* Cycle (default)",
+        "factorName": "Cycle",
+        "factors": [
+          {
+            "kind": "Factor",
+            "name": "ds0.Cycle",
+            "type": "double"
+          }
+        ],
+        "isRequired": true
       }
     ],
     "filters": [
@@ -1479,7 +1495,7 @@
         "description": "Select the prephosphorylated peptides",
         "namedFilter": {
           "kind": "NamedFilter",
-          "logical": "and",
+          "logical": "or",
           "not": false,
           "filterExprs": [
             {
@@ -1506,6 +1522,29 @@
           "name": "PrePhos"
         },
         "isRequired": true
+      },
+      {
+        "kind": "MappingFilter",
+        "name": "Cycle",
+        "description": "Select the last cycle",
+        "namedFilter": {
+          "kind": "NamedFilter",
+          "logical": "and",
+          "not": false,
+          "filterExprs": [
+            {
+              "kind": "FilterExpr",
+              "filterOp": "equals",
+              "stringValue": "124",
+              "factor": {
+                "kind": "Factor",
+                "name": "ds0.Cycle",
+                "type": "double"
+              }
+            }
+            
+          ]
+        }
       }
     ]
   }
