@@ -1473,7 +1473,7 @@
       },
       {
         "kind": "MappingFactor",
-        "name": "Series",
+        "name": "Cycle",
         "type": "double",
         "isSingle": true,
         "description": "Select the factor that defines cycle. \n* Cycle (default)",
