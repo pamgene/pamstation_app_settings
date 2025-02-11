@@ -1596,7 +1596,7 @@
         "isSingle": false,
         "description": "Select a factor that identifies the Supergroup. Supergroup(s) define each comparison group for which t-tests should be calculated. Leave blank if there is only one comparison group. \n\nExample:\n* Supergroup\n* Cell line\n* Genotype",
         "factorName": "Supergroup",
-        "isRequired": false
+        "isRequired": true
       },
       {
         "kind": "MappingFactor",
@@ -1633,7 +1633,7 @@
             "type": "string"
           }
         ],
-        "isRequired": true
+        "isRequired": false
       }
     ]
   }
