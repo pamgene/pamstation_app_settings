@@ -1783,7 +1783,7 @@
       {
         "kind": "MappingFactor",
         "name": "Comparison",
-        "type": "double",
+        "type": "string",
         "isSingle": true,
         "description": "Select the factor that defines the comparison. \n\nExample:\n* Sgroup_contrast \n* contrast",
         "factorName": "Comparison",
@@ -1791,7 +1791,7 @@
           {
             "kind": "Factor",
             "name": "UKA_app.Sgroup_contrast",
-            "type": "double"
+            "type": "string"
           }
         ],
         "isRequired": true
