@@ -1724,5 +1724,120 @@
         "isRequired": false
       }
     ]
+  },
+  {
+    "kind": "AppDesign",
+    "namespace": "UKA_dotplot_app",
+    "description": "Dotplot for kinase results",
+    "name": "UKA_dotplot_app",
+    "type": "UKA_dotplot_app",
+    "factors": [
+      {
+        "kind": "MappingFactor",
+        "name": "Mean Specificity Score",
+        "type": "double",
+        "isSingle": true,
+        "description": "Select the factor that defines the dot size.\n\nExample:\n* Mean specificity score",
+        "factorName": "Dot size",
+        "factors": [
+          {
+            "kind": "Factor",
+            "name": "UKA_app.Mean Specificity Score",
+            "type": "double"
+          }
+        ],
+        "isRequired": true
+      },
+      {
+        "kind": "MappingFactor",
+        "name": "Kinase Name",
+        "type": "string",
+        "isSingle": false,
+        "description": "Select the factor that defines the kinase name.\n\nExample:\n* Kinase Name",
+        "factorName": "Kinase Name",
+        "factors": [
+          {
+            "kind": "Factor",
+            "name": "UKA_app.Kinase Name",
+            "type": "string"
+          }
+        ],
+        "isRequired": true
+      },
+      {
+        "kind": "MappingFactor",
+        "name": "Kinase Family",
+        "type": "string",
+        "isSingle": false,
+        "description": "Select a factor defining the Kinase Family or other grouping of kinases. \n\nExample:\n* Kinase Family \n* Kinase Group",
+        "factorName": "Kinase Family",
+        "factors": [
+          {
+            "kind": "Factor",
+            "name": "UKA_app.Kinase Family",
+            "type": "string"
+          }
+        ],
+        "isRequired": true
+      },
+      {
+        "kind": "MappingFactor",
+        "name": "Sgroup_contrast",
+        "type": "double",
+        "isSingle": true,
+        "description": "Select the factor that defines the comparison. \n\nExample:\n* Sgroup_contrast \n* contrast",
+        "factorName": "Comparison",
+        "factors": [
+          {
+            "kind": "Factor",
+            "name": "UKA_app.Sgroup_contrast",
+            "type": "double"
+          }
+        ],
+        "isRequired": true
+      },
+      {
+        "kind": "MappingFactor",
+        "name": "Median Kinase Statistic",
+        "type": "double",
+        "isSingle": true,
+        "description": "Select the factor that defines the fold change. E.g. Median Kinase Statistic, Median Kinase Change",
+        "factorName": "Fold Change",
+        "factors": [
+          {
+            "kind": "Factor",
+            "name": "UKA_app.Median Kinase Statistic",
+            "type": "double"
+          }
+        ],
+        "isRequired": true
+      }
+    ],
+    "filters": [
+      {
+        "kind": "MappingFilter",
+        "name": "Median Final score",
+        "description": "Filter for significant hits. E.g. Median Final score, Mean Specificity Score, Median Kinase Statistic.",
+        "namedFilter": {
+          "kind": "NamedFilter",
+          "logical": "and",
+          "not": false,
+          "filterExprs": [
+            {
+              "kind": "FilterExpr",
+              "filterOp": "greater",
+              "stringValue": "1.3",
+              "factor": {
+                "kind": "Factor",
+                "name": "UKA_app.Median Final score",
+                "type": "double"
+              }
+            }
+          ],
+          "name": "Significance filter"
+        },
+        "isRequired": false
+      }
+    ]
   }
 ]
