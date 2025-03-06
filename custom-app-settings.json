@@ -1782,7 +1782,7 @@
       },
       {
         "kind": "MappingFactor",
-        "name": "Sgroup_contrast",
+        "name": "Comparison",
         "type": "double",
         "isSingle": true,
         "description": "Select the factor that defines the comparison. \n\nExample:\n* Sgroup_contrast \n* contrast",
