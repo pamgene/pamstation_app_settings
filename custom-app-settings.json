@@ -1816,7 +1816,7 @@
     "filters": [
       {
         "kind": "MappingFilter",
-        "name": "Median Final score",
+        "name": "Significance filter",
         "description": "Filter for significant hits. E.g. Median Final score, Mean Specificity Score, Median Kinase Statistic.",
         "namedFilter": {
           "kind": "NamedFilter",
