@@ -934,7 +934,7 @@
         "name": "Group",
         "type": "string",
         "isSingle": false,
-        "description": "Select the factor that defines the comparison groups.\n\nExample:\n* Test Condition\n* Treatment off chip",
+        "description": "For Comparison-based UKA, select the factor that defines the comparison groups.\n\nExample:\n* Test Condition\n* Treatment off chip",
         "factorName": "Test Condition",
         "factors": [
           {
@@ -943,15 +943,15 @@
             "type": "string"
           }
         ],
-        "isRequired": true
+        "isRequired": false
       },
       {
         "kind": "MappingFactor",
         "name": "Supergroup",
         "type": "string",
         "isSingle": false,
-        "description": "Select a factor that identifies the Supergroup. UKA is run for each group comparison within a Supergroup. \n\nExample:\n* Supergroup\n* Replicate\n* Cell line",
-        "factorName": "Supergroup",
+        "description": "For Comparison-based UKA, select a factor that identifies the Supergroup. UKA is run for each group comparison within a Supergroup. \nExample:\n* Supergroup\n* Replicate\n* Cell line\n\nFor FC-based UKA, this is the factor that defines the Fold Change. \nExample: \n* FC.subtract.value",
+        "factorName": "Supergroup or Observation",
         "factors": [
           {
             "kind": "Factor",
@@ -966,7 +966,7 @@
         "name": "Observation",
         "type": "string",
         "isSingle": false,
-        "description": "Select the factor(s) defining a single value per cell.\n\nExample:\n* Barcode and Row\n* Barcode and Array\n* Sample Name",
+        "description": "For Comparison-based UKA, select the factor(s) defining a single value per cell.\n\nExample:\n* Barcode and Row\n* Barcode and Array\n* Sample Name",
         "factorName": "Single Data Value per Cell",
         "factors": [
           {
@@ -980,7 +980,7 @@
             "type": "double"
           }
         ],
-        "isRequired": true
+        "isRequired": false
       }
     ],
     "filters": []
@@ -1798,7 +1798,7 @@
       },
       {
         "kind": "MappingFactor",
-        "name": "Median Kinase Statistic",
+        "name": "Fold Change",
         "type": "double",
         "isSingle": true,
         "description": "Select the factor that defines the fold change. E.g. Median Kinase Statistic, Median Kinase Change",
@@ -1841,3 +1841,4 @@
     ]
   }
 ]
+
