@@ -952,13 +952,6 @@
         "isSingle": false,
         "description": "For Comparison-based UKA, select a factor that identifies the Supergroup. UKA is run for each group comparison within a Supergroup. \nExample:\n* Supergroup\n* Replicate\n* Cell line\n\nFor FC-based UKA, this is the factor that defines the Fold Change. \nExample: \n* FC.subtract.value",
         "factorName": "Supergroup or Observation",
-        "factors": [
-          {
-            "kind": "Factor",
-            "name": "js0.Supergroup",
-            "type": "string"
-          }
-        ],
         "isRequired": true
       },
       {
