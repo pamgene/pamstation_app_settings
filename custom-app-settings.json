@@ -909,7 +909,7 @@
         "name": "Measurement",
         "type": "double",
         "isSingle": true,
-        "description": "Select the factor that defines the values to use in the computation.\n\nExample:\n* log transform of S100\n* log transformed and ComBat Corrected S100\n* VSN transformed S100\n* VSN transformed and ComBat Corrected S100",
+        "description": "Select the factor that defines the values to use in the computation.\n\nExample:\n* log/VSN transform of S100\n* log/VSN transform and ComBat Corrected S100\n* FC-base UKA: FC.subtract.value",
         "factorName": "Quantitation Type",
         "isRequired": true
       },
@@ -950,7 +950,7 @@
         "name": "Supergroup",
         "type": "string",
         "isSingle": false,
-        "description": "For Comparison-based UKA, select a factor that identifies the Supergroup. UKA is run for each group comparison within a Supergroup. \nExample:\n* Supergroup\n* Replicate\n* Cell line\n\nFor FC-based UKA, this is the factor that defines the Fold Change. \nExample: \n* FC.subtract.value",
+        "description": "For Comparison-based UKA, select a factor that identifies the Supergroup. UKA is run for each group comparison within a Supergroup. \nExample:\n* Supergroup\n* Replicate\n* Cell line\n\nFor FC-based UKA, this is the factor that defines the observation. \nExample: \n* Sample_name",
         "factorName": "Supergroup or Observation",
         "isRequired": true
       },
