@@ -1280,22 +1280,22 @@
         "isSingle": true,
         "description": "Select the factor that defines the values to use in the computation.\n\nExample:\n* Median_SigmBg\n* Any computed value",
         "factorName": "Quantitation Type",
+        "factors": [
+          {
+            "kind": "Factor",
+            "name": "ETS.ds1.S100",
+            "type": "double"
+          }
+        ],
         "isRequired": true
       },
       {
         "kind": "MappingFactor",
-        "name": "Series",
+        "name": "Observation",
         "type": "double",
         "isSingle": true,
         "description": "Select the compound concentration in LogM \n\nExample:\n* Compound concentration LogM",
         "factorName": "Concentration Series",
-        "factors": [
-          {
-            "kind": "Factor",
-            "name": "js0.Compound concentration",
-            "type": "double"
-          }
-        ],
         "isRequired": true
       },
       {
@@ -1319,15 +1319,8 @@
         "name": "Group",
         "type": "string",
         "isSingle": false,
-        "description": "Select compound groups.\n\nMultiple factors are required.\n\nExample:\n* Compound(on Chip)",
-        "factorName": "Compound Group",
-        "factors": [
-          {
-            "kind": "Factor",
-            "name": "js0.Compound(on Chip)",
-            "type": "string"
-          }
-        ],
+        "description": "Select the factor defining the condition, e.g. different compounds or cells.",
+        "factorName": "Condition or Compound",
         "isRequired": false
       }
     ],
