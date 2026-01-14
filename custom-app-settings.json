@@ -777,50 +777,50 @@
           "logical": "or",
           "not": false,
           "filterExprs": [
-           {
-            "kind": "FilterExpr",
-            "filterOp": "equals",
-            "stringValue": "Control",
-            "factor": {
-             "kind": "Factor",
-             "name": "js0.Test Condition",
-             "type": "string"
+            {
+              "kind": "FilterExpr",
+              "filterOp": "equals",
+              "stringValue": "Control",
+              "factor": {
+                "kind": "Factor",
+                "name": "js0.Test Condition",
+                "type": "string"
+              }
+            },
+            {
+              "kind": "FilterExpr",
+              "filterOp": "equals",
+              "stringValue": "T1",
+              "factor": {
+                "kind": "Factor",
+                "name": "js0.Test Condition",
+                "type": "string"
+              }
+            },
+            {
+              "kind": "FilterExpr",
+              "filterOp": "equals",
+              "stringValue": "T2",
+              "factor": {
+                "kind": "Factor",
+                "name": "js0.Test Condition",
+                "type": "string"
+              }
+            },
+            {
+              "kind": "FilterExpr",
+              "filterOp": "equals",
+              "stringValue": "T3",
+              "factor": {
+                "kind": "Factor",
+                "name": "js0.Test Condition",
+                "type": "string"
+              }
             }
-           },
-           {
-            "kind": "FilterExpr",
-            "filterOp": "equals",
-            "stringValue": "T1",
-            "factor": {
-             "kind": "Factor",
-             "name": "js0.Test Condition",
-             "type": "string"
-            }
-           },
-           {
-            "kind": "FilterExpr",
-            "filterOp": "equals",
-            "stringValue": "T2",
-            "factor": {
-             "kind": "Factor",
-             "name": "js0.Test Condition",
-             "type": "string"
-            }
-           },
-           {
-            "kind": "FilterExpr",
-            "filterOp": "equals",
-            "stringValue": "T3",
-            "factor": {
-             "kind": "Factor",
-             "name": "js0.Test Condition",
-             "type": "string"
-            }
-           }
           ],
           "meta": [],
           "name": "Groups to export"
-         },
+        },
         "isRequired": true
       }
     ]
@@ -934,7 +934,7 @@
         "name": "Group",
         "type": "string",
         "isSingle": false,
-        "description": "For Comparison-based UKA, select the factor that defines the comparison groups.\n\nExample:\n* Test Condition\n* Treatment off chip",
+        "description": "For Comparison-based UKA, select the factor that defines the comparison groups.\n\nExample:\n* Test Condition\n* Treatment off chip.\n\n For FC-based UKA, keep it empty.",
         "factorName": "Test Condition",
         "factors": [
           {
@@ -959,7 +959,7 @@
         "name": "Observation",
         "type": "string",
         "isSingle": false,
-        "description": "For Comparison-based UKA, select the factor(s) defining a single value per cell.\n\nExample:\n* Barcode and Row\n* Barcode and Array\n* Sample Name",
+        "description": "For Comparison-based UKA, select the factor(s) defining a single value per cell.\n\nExample:\n* Barcode and Row\n* Barcode and Array\n* Sample Name\n\n For FC-based UKA, keep it empty.",
         "factorName": "Single Data Value per Cell",
         "factors": [
           {
@@ -1294,8 +1294,15 @@
         "name": "Observation",
         "type": "double",
         "isSingle": true,
-        "description": "Select the compound concentration in LogM \n\nExample:\n* Compound concentration LogM",
+        "description": "Select the compound concentration in LogM \n\nExample:\n* LogM",
         "factorName": "Concentration Series",
+        "factors": [
+          {
+            "kind": "Factor",
+            "name": "js0.LogM",
+            "type": "double"
+          }
+        ],
         "isRequired": true
       },
       {
@@ -1616,7 +1623,6 @@
                 "type": "double"
               }
             }
-            
           ]
         }
       }
@@ -1827,4 +1833,3 @@
     ]
   }
 ]
-
