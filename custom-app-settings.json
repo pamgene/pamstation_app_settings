@@ -1523,7 +1523,7 @@
         "type": "double",
         "isSingle": true,
         "description": "Select the factor that defines the dot size.\n\nExample:\n* Mean Specificity Score",
-        "factorName": "Dot size",
+        "factorName": "Mean Specificity Score",
         "factors": [
           {
             "kind": "Factor",
