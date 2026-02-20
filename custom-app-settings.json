@@ -1527,7 +1527,7 @@
         "factors": [
           {
             "kind": "Factor",
-            "name": "UKA_dotplot_app.Mean Specificity Score",
+            "name": "Mean Specificity Score",
             "type": "double"
           }
         ],
@@ -1543,7 +1543,7 @@
         "factors": [
           {
             "kind": "Factor",
-            "name": "UKA_dotplot_app.Kinase Name",
+            "name": "Kinase Name",
             "type": "string"
           }
         ],
@@ -1559,7 +1559,7 @@
         "factors": [
           {
             "kind": "Factor",
-            "name": "UKA_dotplot_app.Kinase Family",
+            "name": "Kinase Family",
             "type": "string"
           }
         ],
@@ -1575,7 +1575,7 @@
         "factors": [
           {
             "kind": "Factor",
-            "name": "UKA_dotplot_app.Sgroup_contrast",
+            "name": "Sgroup_contrast",
             "type": "string"
           }
         ],
@@ -1591,7 +1591,7 @@
         "factors": [
           {
             "kind": "Factor",
-            "name": "UKA_dotplot_app.Median Kinase Statistic",
+            "name": "Median Kinase Statistic",
             "type": "double"
           }
         ],
@@ -1614,7 +1614,7 @@
               "stringValue": "0.7",
               "factor": {
                 "kind": "Factor",
-                "name": "UKA_dotplot_app.Mean Specificity Score",
+                "name": "Mean Specificity Score",
                 "type": "double"
               }
             }
