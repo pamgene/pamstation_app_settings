@@ -1634,10 +1634,10 @@
     "factors": [
       {
         "kind": "MappingFactor",
-        "name": "Mean Specificity Score",
+        "name": "Specificity Score",
         "type": "double",
         "isSingle": true,
-        "description": "Select the factor that defines the dot size.\n\nExample:\n* Mean Specificity Score",
+        "description": "Select the factor that defines the dot size.\n\nExample:\n* Specificity Score",
         "factorName": "Dot size",
         "factors": [
           {
@@ -1698,7 +1698,7 @@
       },
       {
         "kind": "MappingFactor",
-        "name": "Median Kinase Statistic",
+        "name": "Kinase Statistic",
         "type": "double",
         "isSingle": true,
         "description": "Select the factor that defines the fold change. E.g. Kinase Statistic",
@@ -1716,7 +1716,7 @@
     "filters": [
       {
         "kind": "MappingFilter",
-        "name": "Mean Specificity Score",
+        "name": "Specificity Score",
         "description": "Filter for significant hits. E.g. Specificity Score, Kinase Statistic.",
         "namedFilter": {
           "kind": "NamedFilter",
