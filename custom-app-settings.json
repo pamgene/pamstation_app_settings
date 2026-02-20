@@ -1519,11 +1519,11 @@
     "factors": [
       {
         "kind": "MappingFactor",
-        "name": "Dot size",
+        "name": "Mean Specificity Score",
         "type": "double",
         "isSingle": true,
         "description": "Select the factor that defines the dot size.\n\nExample:\n* Mean Specificity Score",
-        "factorName": "Mean Specificity Score",
+        "factorName": "Dot size",
         "factors": [
           {
             "kind": "Factor",
