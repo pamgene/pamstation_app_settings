@@ -1567,7 +1567,7 @@
       },
       {
         "kind": "MappingFactor",
-        "name": "Comparison",
+        "name": "Sgroup_contrast",
         "type": "string",
         "isSingle": true,
         "description": "Select the factor that defines the comparison. \n\nExample:\n* Sgroup_contrast \n* contrast",
@@ -1583,7 +1583,7 @@
       },
       {
         "kind": "MappingFactor",
-        "name": "Fold Change",
+        "name": "Median Kinase Statistic",
         "type": "double",
         "isSingle": true,
         "description": "Select the factor that defines the fold change. E.g. Kinase Statistic",
@@ -1601,7 +1601,7 @@
     "filters": [
       {
         "kind": "MappingFilter",
-        "name": "Specificity filter",
+        "name": "Mean Specificity Score",
         "description": "Filter for significant hits. E.g. Specificity Score, Kinase Statistic.",
         "namedFilter": {
           "kind": "NamedFilter",
@@ -1619,7 +1619,7 @@
               }
             }
           ],
-          "name": "Significance filter"
+          "name": "Specificity filter"
         },
         "isRequired": false
       }
