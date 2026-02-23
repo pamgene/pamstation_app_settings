@@ -1619,7 +1619,7 @@
               }
             }
           ],
-          "name": "Specificity filter"
+          "name": "Mean Specificity Score"
         },
         "isRequired": false
       }
